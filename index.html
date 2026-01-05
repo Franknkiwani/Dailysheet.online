@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Today’s Weird Holidays | DailySheet</title>
+
+<!-- SEO -->
+<meta name="description" content="Today’s weird holidays, funny holidays, strange and obscure celebrations updated daily. Discover what weird holiday is today on DailySheet." />
+<meta name="keywords" content="today weird holidays, weird holidays today, strange holidays today, funny holidays today, obscure holidays today, unusual holidays today, unique holidays today, quirky holidays, daily weird holidays, obscure and strange holidays, today’s strange celebrations, today’s unusual holidays, fun weird holidays" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://dailysheet.online/" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://th.bing.com/th/id/OIG2.4.n.HXv9mfb1s9eqbKUE?dpr=1,9&pid=ImgDetMain&o=7&rm=3">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Today’s Weird Holidays – DailySheet" />
+<meta property="og:description" content="Find today’s weird holidays, funny holidays, and strange celebrations updated daily." />
+<meta property="og:image" content="https://www.bing.com/th/id/OIG2.LukiAE5eMlvQrK5gEQgG?w=540&h=540&c=6&r=0&o=5&dpr=1.9&pid=ImgGn" />
+<meta property="og:url" content="https://dailysheet.online/" />
+<meta property="og:type" content="website" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+:root{
+  --bg:#030712; --card:#1e1e32aa; --border:#fff1; --accent:#c084fc;
+  --text:#f8fafc; --dim:#94a3b8;
+}
+body{
+  margin:0; font-family:system-ui,Inter,sans-serif; background:var(--bg);
+  color:var(--text); display:flex; justify-content:center; min-height:100vh; overflow-x:hidden;
+}
+.container{width:92%; max-width:520px; padding:20px 0 120px;}
+h1{font-size:2.4rem;margin:.2em 0; background:linear-gradient(#fff,#a78bfa); -webkit-background-clip:text; -webkit-text-fill-color:transparent;}
+.date{color:var(--accent); font-size:.75rem; letter-spacing:.12em; text-transform:uppercase;}
+.nav{display:flex; gap:10px; margin:20px 0;}
+.nav button{flex:1; padding:10px; background:transparent; border:1px solid var(--border); color:var(--dim); border-radius:999px; cursor:pointer;}
+.nav button.active{color:#fff; border-color:var(--accent);}
+.list{display:flex; flex-direction:column; gap:18px;}
+.card{background:var(--card); border:1px solid var(--border); border-radius:22px; overflow:hidden; animation:fade .6s ease forwards; position:relative;}
+@keyframes fade{from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none}}
+.img-wrap{position:relative; height:180px; overflow:hidden; background:#111;}
+.img-wrap img{width:100%; height:100%; object-fit:cover; filter:blur(12px) grayscale(30%); transition:filter .5s ease;}
+.img-loaded img{filter:blur(0) grayscale(0);}
+.spinner{position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4);}
+.spinner::after{content:""; width:28px; height:28px; border:3px solid rgba(255,255,255,.3); border-top-color:var(--accent); border-radius:50%; animation:spin 1s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.content{padding:16px;}
+.content h2{margin:0 0 6px;font-size:1.2rem;}
+.content p{margin:0;color:var(--dim); font-size:.9rem; line-height:1.5;}
+.share{margin-top:8px; display:flex; gap:10px;}
+.share a{color:var(--accent); text-decoration:none; font-size:.9rem;}
+.hero{position:relative; border-radius:22px; overflow:hidden; margin-bottom:20px;}
+.hero img{width:100%; height:220px; object-fit:cover; filter:brightness(0.5);}
+.hero-text{position:absolute; bottom:15px; left:15px; right:15px;}
+.hero-text h1{margin:0; font-size:1.8rem;}
+.hero-text p{margin-top:6px; font-size:0.9rem; color:#e5e7eb;}
+.seo-bottom{margin-top:40px; padding:20px; color:var(--dim); font-size:0.9rem; line-height:1.6;}
+.seo-bottom h2{font-size:1.3rem; margin-bottom:12px; color:var(--text);}
+
+/* Full-page loader */
+#pageLoader{
+  position:fixed; inset:0; background:var(--bg); display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:1000; color:var(--accent); overflow:hidden;
+}
+#pageLoader h2{margin-top:12px; font-size:1rem; text-align:center; max-width:280px;}
+.loader-shapes{position:absolute; inset:0;}
+.shape{
+  position:absolute;
+  border-radius:50%;
+  opacity:0.7;
+  animation-name:floatRotate;
+  animation-iteration-count:infinite;
+}
+@keyframes floatRotate{
+  0%{transform:translateY(0) rotate(0deg);}
+  50%{transform:translateY(-20px) rotate(180deg);}
+  100%{transform:translateY(0) rotate(360deg);}
+}
+
+/* Sticky Footer Ad */
+.ad-wrapper {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 360px;
+  height: 60px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  overflow: hidden;
+  background:#0b0b1a;
+}
+#adSlot iframe{
+  border-radius:12px;
+  width:100% !important;
+  height:50px !important;
+}
+</style>
+</head>
+<body>
+
+<!-- Page Loader -->
+<div id="pageLoader">
+  <div class="loader-shapes" id="loaderShapes"></div>
+  <h2>Loading today’s weird holidays… Strange, obscure, funny, unusual celebrations!</h2>
+</div>
+
+<div class="container">
+  <!-- HERO -->
+  <section class="hero">
+    <img src="https://www.bing.com/th/id/OIG2.LukiAE5eMlvQrK5gEQgG?w=540&h=540&c=6&r=0&o=5&dpr=1.9&pid=ImgGn" alt="Today's Weird Holidays" loading="eager">
+    <div class="hero-text">
+      <h1>Today’s Weird Holidays</h1>
+      <p>Discover today’s weird, funny, and obscure holidays updated daily on DailySheet.online.</p>
+    </div>
+  </section>
+
+  <!-- Date + Nav -->
+  <div class="date" id="dateLabel"></div>
+  <div class="nav">
+    <button onclick="loadDay(-1)">Yesterday</button>
+    <button class="active" onclick="loadDay(0)">Today</button>
+    <button onclick="loadDay(1)">Tomorrow</button>
+  </div>
+
+  <!-- Holidays List -->
+  <div id="holidays" class="list">
+    <div class="card"><div class="content">Loading weird holidays…</div></div>
+  </div>
+
+<!-- SEO Bottom Section -->
+<section class="seo-bottom">
+  <h2>Discover More Weird Holidays Today | DailySheet</h2>
+  <p>
+    DailySheet.online brings you the most unusual, strange, and <strong>weird holidays today</strong>. From <strong>funny holidays today</strong> to <strong>obscure and rare celebrations</strong>, we cover <strong>today’s weird holidays</strong>, <strong>strange holidays</strong>, <strong>unique unusual holidays</strong>, <strong>quirky holidays</strong>, <strong>obscure holidays</strong>, <strong>unusual daily holidays</strong>, and <strong>fun holidays</strong> that you won’t find anywhere else. Explore <strong>today’s funny holiday ideas</strong>, <strong>weird and obscure celebrations</strong>, <strong>random unusual holidays</strong>, <strong>strange daily events</strong>, and <strong>unique celebration ideas</strong>.
+  </p>
+  <p>
+    Whether you are searching for <strong>today’s weird holidays</strong>, <strong>funny holidays today</strong>, <strong>strange and obscure celebrations</strong>, or <strong>unique unusual events</strong>, DailySheet.online has it all. Plan your day around <strong>today’s strange holiday</strong>, enjoy <strong>quirky celebrations</strong>, and discover <strong>weird holiday facts</strong>. Stay up to date with <strong>daily weird holidays</strong>, <strong>today’s unusual celebrations</strong>, <strong>obscure holiday ideas</strong>, and <strong>fun holiday activities</strong>.
+  </p>
+  <p>
+    DailySheet is your go-to source for <strong>#weirdholidays</strong>, <strong>#funnyholidays</strong>, <strong>#strangeholidays</strong>, <strong>#obscureholidays</strong>, <strong>#todayweirdholidays</strong>, <strong>#quirkycelebrations</strong>, <strong>#uniqueholidays</strong>, <strong>#funholidayideas</strong>, <strong>#unusualholidays</strong>, and <strong>#dailyweirdholidays</strong>. Check out today, yesterday, and tomorrow’s <strong>weird holiday events</strong>, discover <strong>funny and strange celebrations</strong>, and share with friends to celebrate the unusual. DailySheet.online ensures you never miss a <strong>weird holiday</strong> again!
+  </p>
+  <p>
+    From <strong>#todayweirdholidays</strong> to <strong>#funnycelebrations</strong>, <strong>#obscureandrareholidays</strong>, and <strong>#uniqueevents</strong>, DailySheet.online delivers the most comprehensive <strong>weird holiday calendar</strong>. Celebrate <strong>today’s strange and funny holidays</strong>, enjoy <strong>unusual events</strong>, and plan for <strong>quirky holiday ideas</strong>. Perfect for social media posts, fun activities, and discovering <strong>strange and obscure holidays</strong> every day. Stay informed and join the global community celebrating <strong>#weirdholidays</strong> and <strong>#funholidays</strong> today!
+  </p>
+  <p>
+    Keep DailySheet.online bookmarked for <strong>today’s weird holidays</strong>, <strong>funny holidays today</strong>, <strong>strange celebrations</strong>, <strong>obscure holiday facts</strong>, <strong>unusual daily holidays</strong>, <strong>quirky holiday ideas</strong>, and <strong>#weirdholidays</strong>. Discover <strong>rare holiday events</strong>, <strong>fun celebrations</strong>, <strong>strange and unique holidays</strong>, and explore <strong>today’s weird and funny holidays</strong> updated daily. Join the trend and never miss a <strong>#todayweirdholidays</strong> again!
+  </p>
+</section>
+<!-- Sticky Footer Ad -->
+<div class="ad-wrapper" id="stickyAd">
+  <script>
+atOptions = {
+  'key' : '31ec87f8cba772b5dfffb708faede576',
+  'format' : 'iframe',
+  'height' : 50,
+  'width' : 320,
+  'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/31ec87f8cba772b5dfffb708faede576/invoke.js"></script>
+
+  <div class="ad" id="adSlot"></div>
+</div>
+
+
+<script>
+const boring=["independence","national","republic","constitution","memorial","victory","armed","freedom"];
+const emojis=["🎉","🤡","🍕","🧦","🐸","🧠","🎮","🍩","🦄"];
+
+function formatDate(d){return d.toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"});}
+
+// Loader shapes
+function createLoaderShapes(){
+  const loader=document.getElementById('loaderShapes');
+  for(let i=0;i<12;i++){
+    const s=document.createElement('div');
+    s.className='shape';
+    const size=10+Math.random()*25;
+    s.style.width=size+'px';
+    s.style.height=size+'px';
+    s.style.left=Math.random()*100+'%';
+    s.style.top=Math.random()*100+'%';
+    s.style.animationDuration=(3+Math.random()*2)+'s';
+    s.style.background=['#c084fc','#ff6b6b','#4ade80','#facc15','#38bdf8'][Math.floor(Math.random()*5)];
+    loader.appendChild(s);
+  }
+}
+createLoaderShapes();
+
+// Get query parameter
+function getQueryParam(name){
+  const params = new URLSearchParams(window.location.search);
+  return params.get(name);
+}
+
+// Update meta dynamically
+function updateMeta(holiday){
+  if(!holiday) return;
+  document.title = holiday.text + " | DailySheet";
+  document.querySelector('meta[name="description"]').setAttribute('content', holiday.extract || 'Discover this weird holiday!');
+  document.querySelector('meta[property="og:title"]').setAttribute('content', holiday.text + ' – DailySheet');
+  document.querySelector('meta[property="og:description"]').setAttribute('content', holiday.extract || 'Discover this weird holiday!');
+  document.querySelector('meta[property="og:image"]').setAttribute('content', holiday.image || 'https://www.bing.com/th/id/OIG2.LukiAE5eMlvQrK5gEQgG?w=540&h=540&c=6&r=0&o=5&dpr=1.9&pid=ImgGn');
+}
+
+// Main loader
+async function loadDay(offset){
+  const d=new Date(); d.setDate(d.getDate()+offset);
+  document.getElementById("dateLabel").textContent=formatDate(d);
+  document.querySelectorAll(".nav button").forEach((b,i)=>b.classList.toggle("active",i===offset+1));
+
+  const mm=String(d.getMonth()+1).padStart(2,"0");
+  const dd=String(d.getDate()).padStart(2,"0");
+  const box=document.getElementById("holidays"); box.innerHTML="";
+
+  try{
+    const res=await fetch(`https://en.wikipedia.org/api/rest_v1/feed/onthisday/holidays/${mm}/${dd}`);
+    const data=await res.json();
+    const list=Array.isArray(data.holidays)?data.holidays:[];
+
+    const weird=list.filter(h=>h.text&&!boring.some(w=>h.text.toLowerCase().includes(w)));
+    if(!weird.length){box.innerHTML=`<div class="card"><div class="content"><h2>No Weird Holidays</h2><p>The universe is quiet today. Come back tomorrow.</p></div></div>`; return;}
+
+    // Check if query param exists
+    const holidayIndex = parseInt(getQueryParam('holiday'));
+    if(!isNaN(holidayIndex) && weird[holidayIndex]){
+      const h = weird[holidayIndex];
+      const page = h.pages?.[0];
+      const img = page?.thumbnail?.source || "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=60";
+      box.innerHTML = `
+        <div class="card img-loaded">
+          <div class="img-wrap">
+            <img src="${img}" alt="${h.text}">
+          </div>
+          <div class="content">
+            <h2>${emojis[holidayIndex % emojis.length]} ${h.text}</h2>
+            <p>${page?.extract||"A strange and unusual holiday celebrated today."}</p>
+            <div class="share">
+              <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(h.text + ' – Discover today’s weird holidays: https://dailysheet.online')}" target="_blank">Tweet</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://dailysheet.online" target="_blank">Share</a>
+            </div>
+          </div>
+        </div>
+      `;
+      updateMeta({
+        text: h.text,
+        extract: page?.extract,
+        image: img
+      });
+      document.getElementById("pageLoader").style.display="none";
+      return;
+    }
+
+    // Otherwise show all
+    weird.forEach((h,i)=>{
+      const page=h.pages?.[0];
+      const img=page?.thumbnail?.source||"https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=60";
+      const card=document.createElement("div"); card.className="card";
+      card.style.animationDelay=`${i*0.1}s`;
+      card.innerHTML=`
+        <div class="img-wrap" id="img-${i}">
+          <div class="spinner"></div>
+          <img src="${img}" alt="${h.text}" />
+        </div>
+        <div class="content">
+          <h2>${emojis[i%emojis.length]} ${h.text}</h2>
+          <p>${page?.extract||"A strange and unusual holiday celebrated today."}</p>
+          <div class="share">
+            <a href="?holiday=${i}">Open Page</a>
+          </div>
+        </div>
+      `;
+      box.appendChild(card);
+    });
+
+    // Wait for images
+    const images=document.querySelectorAll('#holidays img');
+    let loadedCount=0;
+    images.forEach(img=>{
+      img.onload=img.onerror=()=>{
+        loadedCount++;
+        if(loadedCount===images.length){
+          document.getElementById("pageLoader").style.display="none";
+          document.getElementById("stickyAd").style.display="flex"; // show sticky ad
+          images.forEach(i=>i.parentElement.classList.add('img-loaded'));
+        }
+      }
+    });
+
+  }catch{
+    box.innerHTML=`<div class="card"><div class="content"><h2>Error</h2><p>Failed to load weird holidays. Try again later.</p></div></div>`;
+    document.getElementById("pageLoader").style.display="none";
+  }
+}
+
+loadDay(0);
+</script>
+</body>
+</html>
